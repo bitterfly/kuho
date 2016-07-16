@@ -1,0 +1,178 @@
+{
+    "cinemas": [
+        {
+            "name": "zapad",
+            "url": "http://zapad.arena.gs",
+            "chain": "arena",
+            "id": "azap",
+            "acquired": 1468494934
+        },
+        {
+            "name": "mladost",
+            "url": "http://mladost.arena.gs",
+            "chain": "arena",
+            "id": "aml",
+            "acquired": 1468494804
+        },
+        {
+            "name": "stamboliyski",
+            "url": "http://st.cinemacity.gs",
+            "chain": "cinemacity",
+            "id": "ccmall",
+            "acquired": 1468494334
+        }
+    ],
+    "films": [
+        {
+            "imdb_id": null,
+            "title": "Epic monkeys killing cows",
+            "screenings": [
+                {
+                    "id": "70374",
+                    "cinema_id": "ccmall",
+                    "hall": "Зала 3",
+                    "time": 146850143,
+                    "tickets": [
+                        {
+                            "booking_url": "http://foo/bar",
+                            "price": 10.5,
+                            "currency": "BGN",
+                            "type": "Students and grannies",
+                            "acquired": 146850143
+                        },
+                        {
+                            "booking_url": "http://foo/baz",
+                            "price": 9.5,
+                            "currency": "BGN",
+                            "type": "Disabled",
+                            "acquired": 146850143
+                        },
+                        {
+                            "booking_url": "http://foo/qux",
+                            "price": 12.5,
+                            "currency": "BGN",
+                            "type": "Regular",
+                            "acquired": 146850143
+                        }
+                    ],
+                    "active": true,
+                    "is_subtitled": false,
+                    "is_dubbed": true,
+                    "is_3d": true,
+                    "is_4d": false,
+                    "is_imax": false,
+                    "language": "EN",
+                    "variant": "Epic monkeys killing cows MasterImage 3D",
+                    "duration": 6180000000000,
+                    "acquired": 1468494334
+                },
+                {
+                    "id": "70375",
+                    "cinema_id": "ccmall",
+                    "hall": "Зала Dolby",
+                    "time": 146856144,
+                    "tickets": [
+                        {
+                            "booking_url": "http://foo/bar",
+                            "price": 10.5,
+                            "currency": "BGN",
+                            "type": "Students and grannies",
+                            "acquired": 146850143
+                        },
+                        {
+                            "booking_url": "http://foo/baz",
+                            "price": 9.5,
+                            "currency": "BGN",
+                            "type": "Disabled",
+                            "acquired": 146850143
+                        },
+                        {
+                            "booking_url": "http://foo/qux",
+                            "price": 12.5,
+                            "currency": "BGN",
+                            "type": "Regular",
+                            "acquired": 146850143
+                        }
+                    ],
+                    "active": true,
+                    "is_subtitled": true,
+                    "is_dubbed": false,
+                    "is_3d": false,
+                    "is_4d": false,
+                    "is_imax": false,
+                    "language": "EN",
+                    "variant": "Epic monkeys killing cows original 2D",
+                    "duration": 6180000000000,
+                    "acquired": 1468494334
+                }
+            ],
+            "rating": "категория B",
+            "acquired": 1468494334
+        },
+        {
+            "imdb_id": 4444444,
+            "title": "Magic dildo horses with tentacles",
+            "screenings": [
+                {
+                    "id": "70314",
+                    "cinema_id": "azap",
+                    "hall": "Яка Зала 5",
+                    "time": 146850143,
+                    "tickets": [
+                        {
+                            "booking_url": "http://foo/bar",
+                            "price": 10.5,
+                            "currency": "BGN",
+                            "type": "Students and grannies",
+                            "acquired": 146850143
+                        },
+                        {
+                            "booking_url": "http://foo/baz",
+                            "price": 3,
+                            "currency": "BGN",
+                            "type": "Porno promo for disabled people",
+                            "acquired": 146850143
+                        },
+                        {
+                            "booking_url": "http://foo/qux",
+                            "price": 12.5,
+                            "currency": "BGN",
+                            "type": "Regular",
+                            "acquired": 146850143
+                        }
+                    ],
+                    "active": true,
+                    "is_subtitled": false,
+                    "is_dubbed": true,
+                    "is_3d": true,
+                    "is_4d": false,
+                    "is_imax": false,
+                    "language": "JP",
+                    "variant": "Magic dildo horses with tentacles ultra edition",
+                    "duration": 6180000000000,
+                    "acquired": 1468494324
+                },
+                {
+                    "id": "70315",
+                    "cinema_id": "ccmall",
+                    "hall": "Зала D",
+                    "time": 146854144,
+                    "tickets": null,
+                    "active": true,
+                    "is_subtitled": true,
+                    "is_dubbed": false,
+                    "is_3d": true,
+                    "is_4d": true,
+                    "is_imax": false,
+                    "language": "JP",
+                    "variant": "Magic dildo horses with tentacles with real 4D jizz",
+                    "duration": 6180000000000,
+                    "acquired": 1468494334
+                }
+            ],
+            "rating": "порно",
+            "acquired": 1468494334
+        }
+    ]
+}
+
