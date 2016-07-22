@@ -1,0 +1,17 @@
+{{ define "epicPage" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Name }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ .StaticURL }}/css/foo.css" />
+</head>
+<body>
+    <table>
+        {{ range .Things }}
+            <tr><th>{{ .Bleep }}</th> <th>{{ .Bloop }}</th></tr>
+        {{ end }}
+    </table>
+    Foo bar <i class="image-drawing">drawing</i> baz
+</body>
+</html>
+{{ end }}

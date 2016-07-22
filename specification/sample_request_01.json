@@ -25,6 +25,7 @@
     "films": [
         {
             "imdb_id": null,
+            "imdb_id_certainty": 0,
             "title": "Epic monkeys killing cows",
             "screenings": [
                 {
@@ -111,6 +112,7 @@
         },
         {
             "imdb_id": 4444444,
+            "imdb_id_certainty": 0.8,
             "title": "Magic dildo horses with tentacles",
             "screenings": [
                 {
