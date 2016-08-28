@@ -11,9 +11,9 @@ type Bleh struct {
 	db *sqlx.DB
 }
 
-func NewBleh(dbDriver string, dbURN string) (*Bleh, error) {
+func NewBleh(dbURN string) (*Bleh, error) {
 	var db *sqlx.DB
-	db, err := sqlx.Connect(dbDriver, dbURN)
+	db, err := sqlx.Connect("postgres", dbURN)
 	if err != nil {
 		return nil, fmt.Errorf("unable to connect to database: %s", err)
 	}
