@@ -3,6 +3,7 @@ package backend
 import (
 	"fmt"
 
+	"github.com/bitterfly/kuho/spiderdata"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
 )
@@ -40,5 +41,9 @@ func (b *Backend) DropDB() error {
 	if err != nil {
 		return fmt.Errorf("unable to drop schema: %s", err)
 	}
+	return nil
+}
+
+func (b *Backend) Fill(data *spiderdata.Request) error {
 	return nil
 }

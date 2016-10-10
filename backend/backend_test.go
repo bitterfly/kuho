@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"testing"
+
+	"github.com/bitterfly/kuho/spiderdata"
 )
 
 var dbURN string
@@ -48,4 +50,16 @@ func closeBackend(t *testing.T, backend *Backend) {
 func TestBackend_Info(t *testing.T) {
 	backend := openBackend(t)
 	defer closeBackend(t, backend)
+}
+
+func TestBackend_Fill(t *testing.T) {
+	backend := openBackend(t)
+	defer closeBackend(t, backend)
+
+	data := &spiderdata.Request{}
+	unmarshalJSON(t, data, "sample_requests/simple_request.json")
+	err := backend.Fill(data)
+	if err != nil {
+		t.Errorf("Could not fill database %s", err)
+	}
 }
