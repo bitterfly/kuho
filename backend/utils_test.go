@@ -11,6 +11,7 @@ func unmarshalJSON(t *testing.T, data interface{}, filename string) {
 	if err != nil {
 		t.Fatalf("Could not open file %s - %s", filename, err)
 	}
+	defer file.Close()
 
 	decoder := json.NewDecoder(file)
 	err = decoder.Decode(data)
