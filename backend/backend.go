@@ -11,7 +11,7 @@ type Backend struct {
 	db *sqlx.DB
 }
 
-func NewBackend(dbURN string) (*Backend, error) {
+func New(dbURN string) (*Backend, error) {
 	var db *sqlx.DB
 	db, err := sqlx.Connect("postgres", dbURN)
 	if err != nil {
@@ -25,16 +25,6 @@ func NewBackend(dbURN string) (*Backend, error) {
 
 func (b *Backend) Foo() (string, error) {
 	return "this is foo.", nil
-}
-
-func (b *Backend) GetAge(name string) (int, error) {
-	var age int
-	err := b.db.Get(&age, "select age from person where name = $1", name)
-	if err != nil {
-		return 0, err
-	}
-
-	return age, nil
 }
 
 func (b *Backend) InitDB() error {
