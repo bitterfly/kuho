@@ -4,21 +4,21 @@
             "name": "zapad",
             "url": "http://zapad.arena.gs",
             "chain": "arena",
-            "id": "azap",
+            "short_name": "azap",
             "acquired": "2006-01-02T19:04:05+07:00"
         },
         {
             "name": "mladost",
             "url": "http://mladost.arena.gs",
             "chain": "arena",
-            "id": "aml",
+            "short_name": "aml",
             "acquired": "2006-01-02T20:04:05+07:00"
         },
         {
             "name": "stamboliyski",
             "url": "http://st.cinemacity.gs",
             "chain": "cinemacity",
-            "id": "ccmall",
+            "short_name": "ccmall",
             "acquired": "2006-01-02T21:04:05+07:00"
         }
     ],
@@ -30,7 +30,7 @@
             "screenings": [
                 {
                     "id": "70374",
-                    "cinema_id": "ccmall",
+                    "cinema_short_name": "ccmall",
                     "hall": "Зала 3",
                     "time": "2006-01-02T15:04:05+07:00",
                     "tickets": [
@@ -69,7 +69,7 @@
                 },
                 {
                     "id": "70375",
-                    "cinema_id": "ccmall",
+                    "cinema_short_name": "ccmall",
                     "hall": "Зала Dolby",
                     "time": "2016-10-10T16:58:00+03:00",
                     "tickets": [
@@ -117,7 +117,7 @@
             "screenings": [
                 {
                     "id": "70314",
-                    "cinema_id": "azap",
+                    "cinema_short_name": "azap",
                     "hall": "Яка Зала 5",
                     "time": "2006-01-02T15:04:05+07:00",
                     "tickets": [
@@ -156,7 +156,7 @@
                 },
                 {
                     "id": "70315",
-                    "cinema_id": "ccmall",
+                    "cinema_short_name": "ccmall",
                     "hall": "Зала D",
                     "time": "2016-10-10T16:58:00+03:00",
                     "tickets": null,

@@ -18,21 +18,21 @@ type Film struct {
 
 // Screening is a performance of a film in a particular cinema at a particular time
 type Screening struct {
-	ID          string        `json:"id"`
-	CinemaID    string        `json:"cinema_id"`
-	Hall        string        `json:"hall"`
-	Time        time.Time     `json:"time"`
-	Tickets     []*Ticket     `json:"tickets"`
-	Active      bool          `json:"active"`
-	IsSubtitled bool          `json:"is_subtitled"`
-	IsDubbed    bool          `json:"is_dubbed"`
-	Is3D        bool          `json:"is_3d"`
-	Is4D        bool          `json:"is_4d"`
-	IsImax      bool          `json:"is_imax"`
-	Language    string        `json:"language"`
-	Variant     string        `json:"variant"`
-	Duration    time.Duration `json:"duration"`
-	Acquired    time.Time     `json:"acquired"`
+	ID              string        `json:"id"`
+	CinemaShortName string        `json:"cinema_short_name"`
+	Hall            string        `json:"hall"`
+	Time            time.Time     `json:"time"`
+	Tickets         []*Ticket     `json:"tickets"`
+	Active          bool          `json:"active"`
+	IsSubtitled     bool          `json:"is_subtitled"`
+	IsDubbed        bool          `json:"is_dubbed"`
+	Is3D            bool          `json:"is_3d"`
+	Is4D            bool          `json:"is_4d"`
+	IsImax          bool          `json:"is_imax"`
+	Language        string        `json:"language"`
+	Variant         string        `json:"variant"`
+	Duration        time.Duration `json:"duration"`
+	Acquired        time.Time     `json:"acquired"`
 }
 
 // Ticket is a ticket for a single performance
