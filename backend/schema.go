@@ -1,25 +1,26 @@
 package backend
 
 /*
-Cinema(_id, name<string>, url<string>, chain<string>, lastUpdate<date>)
+Cinema(_id, name<string>, url<string>, chain<string>, lastUpdate<timestamp>)
 
 Screening(_id, cinemaId<int>, filmId<int>, hall<string>, duration<duration>, language<string>, completeTitle<string>, isActive<bool>, HasSubtitles<bool>, hasDub<bool>, isImax<bool>, is3D<bool>, is4D<bool>, lastUpdate<duration>)
 
 Film(_id, imdbFilmId<int>, title<string>, year<int>, rating<string>, imdbCertainty<float32>)
 
-IMDBFilm(_id, title<string>, year<int>, poster<string>, imdbRating<float32>, numberOfVotes<int>, releaseDate<date>, tagline<string>, laguages string>, imdbFilmDuration<duration>, lastUpdate<date>)
+IMDBFilm(_id, title<string>, year<int>, poster<string>, imdbRating<float32>, numberOfVotes<int>, releaseDate<timestamp>, tagline<string>, laguages string>, imdbFilmDuration<duration>, lastUpdate<timestamp>)
 
 Plot(_id, IMDBFilmId<bigint>, length<string>, description<string>)
 
 ForegnTitle(_id, IMDBFilmId<bigint>, country<string>, title<string>)
 
-Ticket(_id, screeningId<int>, cinemaId<int>, type<string>, bookingURL<string>, price<float32>, currency<string>, lastUpdate<date>)
+Ticket(_id, screeningId<int>, cinemaId<int>, type<string>, bookingURL<string>, price<float32>, currency<string>, lastUpdate<timestamp>)
 */
 
 const schema = `
 	create table cinema(
 		id 			 bigserial primary key,
 		name 		 varchar(256),
+		shortName	 varchar(25),
 		url 		 varchar(512),
 		chain 		 varchar(256),
 		lastUpdate   timestamp
@@ -50,7 +51,7 @@ const schema = `
 
 	create table screening(
 		id                bigserial primary key,
-		cinemaId 	 	  integer, 
+		cinemaId 	 	  integer references cinema(id), 
 		filmId 		 	  bigint references film(id),
 		hall		 	  varchar(256),
 		duration 		  bigint,

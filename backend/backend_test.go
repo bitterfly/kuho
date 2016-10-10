@@ -3,6 +3,9 @@ package backend
 import (
 	"flag"
 	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
 	"testing"
 
 	"github.com/bitterfly/kuho/spiderdata"
@@ -62,4 +65,12 @@ func TestBackend_Fill(t *testing.T) {
 	if err != nil {
 		t.Errorf("Could not fill database %s", err)
 	}
+	pause()
+}
+
+func pause() {
+	sigs := make(chan os.Signal, 1)
+	fmt.Printf("Press CTRL-C to continue...\n")
+	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	<-sigs
 }
