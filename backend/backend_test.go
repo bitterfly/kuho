@@ -3,11 +3,13 @@ package backend
 import (
 	"flag"
 	"fmt"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"testing"
 
+	"github.com/DexterLB/mvm/imdb/jsonapi"
 	"github.com/bitterfly/kuho/spiderdata"
 )
 
@@ -30,7 +32,12 @@ func init() {
 }
 
 func openBackend(t *testing.T) *Backend {
-	backend, err := New(dbURN)
+	client := &jsonapi.Client{
+		HttpClient: http.DefaultClient,
+		Address:    "http://localhost:8088",
+	}
+
+	backend, err := New(dbURN, client)
 	if err != nil {
 		t.Fatalf("cannot create backend: %s", err)
 	}
@@ -65,7 +72,7 @@ func TestBackend_Fill(t *testing.T) {
 	if err != nil {
 		t.Errorf("Could not fill database %s", err)
 	}
-	pause()
+	//pause()
 }
 
 func TestBackend_Fill_Film_Conflict(t *testing.T) {
@@ -78,7 +85,7 @@ func TestBackend_Fill_Film_Conflict(t *testing.T) {
 	if err != nil {
 		t.Errorf("Could not fill database %s", err)
 	}
-	//pause()
+	pause()
 }
 
 func pause() {

@@ -35,7 +35,7 @@ const schema = `
 		numberOfVotes integer,
 		releaseDate   timestamp,
 		tagline       varchar(256),
-		laguages      varchar(512),
+		languages      varchar(512),
 		filmDuration  bigint,
 		lastUpdate    timestamp
 	);
@@ -47,7 +47,6 @@ const schema = `
 		year 		  integer,
 		rating 		  varchar(256),
 		imdbCertainty real,
-		
 		unique(title, year)
 	);
 
