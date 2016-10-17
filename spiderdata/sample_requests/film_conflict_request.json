@@ -1,0 +1,53 @@
+{
+    "cinemas": [
+        {
+            "name": "zapad",
+            "url": "http://zapad.arena.gs",
+            "chain": "arena",
+            "short_name": "azap",
+            "acquired": "2006-01-02T19:04:05+07:00"
+        }
+    ],
+    "films": [
+        {
+            "imdb_id": null,
+            "imdb_id_certainty": 0,
+            "title": "Same",
+            "year": 2000,
+            "screenings": [],
+            "rating": "first rating",
+            "acquired": "2016-10-10T16:58:00+03:00"
+        },
+
+        {
+            "imdb_id": null,
+            "imdb_id_certainty": 0,
+            "title": "Same",
+            "year": 2000,
+            "screenings": [],
+            "rating": "second rating",
+            "acquired": "2016-10-10T16:58:00+03:00"
+        },
+
+        {
+            "imdb_id": 2222,
+            "imdb_id_certainty": 0.2,
+            "title": "First title",
+            "year": 2000,
+            "screenings": [],
+            "rating": "first rating",
+            "acquired": "2016-10-10T16:58:00+03:00"
+        },
+
+        {
+            "imdb_id": 2222,
+            "imdb_id_certainty": 0.8,
+            "title": "Second Title",
+            "year": 2001,
+            "screenings": [],
+            "rating": "second rating",
+            "acquired": "2016-10-10T16:58:00+03:00"
+        }
+    ]
+}
+

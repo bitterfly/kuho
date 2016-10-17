@@ -68,6 +68,19 @@ func TestBackend_Fill(t *testing.T) {
 	pause()
 }
 
+func TestBackend_Fill_Film_Conflict(t *testing.T) {
+	backend := openBackend(t)
+	defer closeBackend(t, backend)
+
+	data := &spiderdata.Request{}
+	unmarshalJSON(t, data, "sample_requests/film_conflict_request.json")
+	err := backend.Fill(data)
+	if err != nil {
+		t.Errorf("Could not fill database %s", err)
+	}
+	//pause()
+}
+
 func pause() {
 	sigs := make(chan os.Signal, 1)
 	fmt.Printf("Press CTRL-C to continue...\n")

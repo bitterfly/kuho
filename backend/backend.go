@@ -85,9 +85,13 @@ func insertFilm(tx *sqlx.Tx, film *spiderdata.Film) error {
 	screenings := film.Screenings
 
 	var filmID int64
+	var err error
 	//imdbFilmId, title, year,rating, imdbCertainty
-	err := tx.Get(&filmID, INSERT_INTO_FILM, nil, film.Title, film.Year, film.Rating, film.ImdbIDCertainty)
-
+	if film.ImdbID == nil {
+		err = tx.Get(&filmID, INSERT_INTO_FILM_NULL_IMDBID, nil, film.Title, film.Year, film.Rating, film.ImdbIDCertainty)
+	} else {
+		err = tx.Get(&filmID, INSERT_INTO_FILM_NOT_NULL_IMDBID, nil, film.Title, film.Year, film.Rating, film.ImdbIDCertainty)
+	}
 	if err != nil {
 		return fmt.Errorf("Could not write into film - %s", err)
 	}

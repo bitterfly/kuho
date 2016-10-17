@@ -4,11 +4,24 @@ const (
 	INSERT_INTO_CINEMA = `
 		insert into cinema(id, name, shortName, url, chain, lastUpdate)
 		values (default, $1, $2, $3, $4, $5)
+		on conflict (shortName) do update
+		set name = $1, shortName = $2, url = $3, chain = $4, lastUpdate = $5
 	`
 
-	INSERT_INTO_FILM = `
+	INSERT_INTO_FILM_NOT_NULL_IMDBID = `
 		insert into film(id, imdbFilmId, title, year,rating, imdbCertainty)
-		values (default, $1, $2, $3, $4, $5) returning id
+		values (default, $1, $2, $3, $4, $5) 
+		on conflict (imdbFilmId) do update
+		set imdbFilmId = $1, title = $2, year = $3, rating = $4, imdbCertainty = $5
+		returning id
+	`
+
+	INSERT_INTO_FILM_NULL_IMDBID = `
+		insert into film(id, imdbFilmId, title, year,rating, imdbCertainty)
+		values (default, $1, $2, $3, $4, $5) 
+		on conflict (title, year) do update
+		set imdbFilmId = $1, title = $2, year = $3, rating = $4, imdbCertainty = $5
+		returning id
 	`
 
 	INSERT_INTO_SCREENING = `

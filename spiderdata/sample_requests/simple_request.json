@@ -20,6 +20,13 @@
             "chain": "cinemacity",
             "short_name": "ccmall",
             "acquired": "2006-01-02T21:04:05+07:00"
+        },
+        {
+            "name": "stamboliyski",
+            "url": "second url",
+            "chain": "cinemacity",
+            "short_name": "ccmall",
+            "acquired": "2006-01-02T21:04:05+07:00"
         }
     ],
     "films": [

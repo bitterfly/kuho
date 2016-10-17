@@ -20,7 +20,7 @@ const schema = `
 	create table cinema(
 		id 			 bigserial primary key,
 		name 		 varchar(256),
-		shortName	 varchar(25),
+		shortName	 varchar(25) unique,
 		url 		 varchar(512),
 		chain 		 varchar(256),
 		lastUpdate   timestamp
@@ -42,11 +42,13 @@ const schema = `
 
 	create table film(
 		id 			  bigserial primary key,
-		imdbFilmId    bigint references imdbFilm(id),
+		imdbFilmId    bigint references imdbFilm(id) unique, 
 		title 		  varchar(256),
 		year 		  integer,
 		rating 		  varchar(256),
-		imdbCertainty real
+		imdbCertainty real,
+		
+		unique(title, year)
 	);
 
 	create table screening(
